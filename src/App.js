@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import RouteComponent from "./Routes";
+/**
+ * Reusable Button Component
+ * @param {string} label - The text label of the button
+ * @param {function} onClick - The function to be executed when the button is clicked
+ * @param {string} className - Additional class name(s) for styling
+ * @returns {JSX.Element} - The rendered button element
+ */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <RouteComponent path={"/"}/>
+    </Router>
+
   );
 }
 
